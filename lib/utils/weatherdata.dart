@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 
-const apiKey = "4228c0e1bcb0a695572d6ef0b21809e8";
+const apiKey = "-----------------------";
 
 
 class weatherdata {
