@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hava/utils/weather.dart';
 
 class mainscreen extends StatefulWidget {
-  const mainscreen({Key? key}) : super(key: key);
+  final WeatherData weatherData;
+
+  mainscreen({required this.weatherData});
 
   @override
   _mainscreenState createState() => _mainscreenState();

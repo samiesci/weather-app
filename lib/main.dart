@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Hava Durumu',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const mainscreen(),
+      home: mainscreen(),
     );
   }
 }
