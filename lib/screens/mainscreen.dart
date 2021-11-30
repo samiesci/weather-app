@@ -4,15 +4,40 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hava/utils/weather.dart';
 
 class mainscreen extends StatefulWidget {
-  final WeatherData weatherData;
+  WeatherData weatherData;
 
-  mainscreen({required this.weatherData});
+  mainscreen({Key? key, required this.weatherData}) : super(key: key);
 
   @override
   _mainscreenState createState() => _mainscreenState();
 }
 
 class _mainscreenState extends State<mainscreen> {
+  late int temperature;
+  late Icon WeatherDisplayIcon;
+  late AssetImage backgroundImage;
+  late String city;
+  //veriler değiştikçe update olması için
+
+  void updateDisplayInfo(WeatherData weatherData) {
+    //setState statik verileri anlık alabilmek için
+    setState(() {
+      temperature = weatherData.currentTemperature.round();
+      city = weatherData.city;
+      WeatherDisplayData weatherDisplayData =
+          weatherData.getWeatherDisplayData();
+      //weatherDisplayDatadan icon ve image çekmek için
+      backgroundImage = weatherDisplayData.weatherImage;
+      WeatherDisplayIcon = weatherDisplayData.weatherIcon;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    updateDisplayInfo(widget.weatherData);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,35 +45,38 @@ class _mainscreenState extends State<mainscreen> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/bulutlu2.png'),
+            image: backgroundImage,
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(
-              height: 40,
+        child:
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          SizedBox(
+            height: 40,
+          ),
+          Container(
+            child: WeatherDisplayIcon,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Center(
+            child: Text(
+              '$temperature°',
+              style: TextStyle(
+                  color: Colors.white, fontSize: 40.0, letterSpacing: -5),
             ),
-            Container(
-              child: Icon(
-                FontAwesomeIcons.cloud,
-                size: 75.0,
-                color: Colors.blueGrey,
-              ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Center(
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Center(
               child: Text(
-                '12°',
-                style: TextStyle(
-                    color: Colors.white, fontSize: 40.0, letterSpacing: -5),
-              ),
-            )
-          ],
-        ),
+            '$city',
+            style: TextStyle(
+                color: Colors.white, fontSize: 40.0, letterSpacing: -5),
+          )),
+        ]),
       ),
     );
   }

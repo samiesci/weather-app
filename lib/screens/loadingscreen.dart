@@ -33,7 +33,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       print("API'den sıcaklık ve durum bilgisi sağlanamıyor.");
     }
 
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+    Navigator.pushReplacement(context(), MaterialPageRoute(builder: (context) {
       return mainscreen(
         weatherData: weatherData,
       );
