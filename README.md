@@ -8,4 +8,5 @@
 
 
 ✦İnstagram: @samiesci1
+
 ✦Twitter: @samiesci    
