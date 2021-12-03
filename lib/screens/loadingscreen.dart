@@ -34,7 +34,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     }
 
     Navigator.pushReplacement(context(), MaterialPageRoute(builder: (context) {
-      return mainscreen(
+      return MainScreen(
         weatherData: weatherData,
       );
     }));

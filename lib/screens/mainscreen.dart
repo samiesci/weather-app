@@ -3,16 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hava/utils/weather.dart';
 
-class mainscreen extends StatefulWidget {
+class MainScreen extends StatefulWidget {
   WeatherData weatherData;
 
-  mainscreen({Key? key, required this.weatherData}) : super(key: key);
+  MainScreen({Key? key, required this.weatherData}) : super(key: key);
 
   @override
-  _mainscreenState createState() => _mainscreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _mainscreenState extends State<mainscreen> {
+class _MainScreenState extends State<MainScreen> {
   late int temperature;
   late Icon WeatherDisplayIcon;
   late AssetImage backgroundImage;
