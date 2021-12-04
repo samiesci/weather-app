@@ -1,5 +1,5 @@
 ✦API ile Enlem,Boylam(Latitude,Longitude) kullanarak veri çekmek.
-
+----------------------------------------------------------------------
 
 ✦API anahtarı için https://openweathermap.org                                                                   
 ✦Projede kullanılan API Key ücretsizdir                                                                         
@@ -8,5 +8,6 @@
 
 
 ✦İnstagram: @samiesci1
-
 ✦Twitter: @samiesci    
+
+
