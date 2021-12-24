@@ -2,7 +2,7 @@
 --------------------------------------------------------------------
 
 ✦API anahtarı için => https://openweathermap.org
--------------------------------------------------                                                                   
+-------------------------------------------------<>                                                                   
 ✦Projede kullanılan API Key ücretsizdir                                                                         
 ✦lib/utils/weather.dart üzerinde const apiKey "------" kendi API Key'inizi kullanarak projeyi kullanabilirsiniz.
 
