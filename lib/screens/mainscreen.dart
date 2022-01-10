@@ -6,7 +6,7 @@ import 'package:hava/utils/weather.dart';
 class MainScreen extends StatefulWidget {
   WeatherData weatherData;
 
-  MainScreen({Key? key, required this.weatherData}) : super(key: key);
+  MainScreen( @required this.weatherData) ;
 
   @override
   _MainScreenState createState() => _MainScreenState();
