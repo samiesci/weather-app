@@ -7,7 +7,7 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart';
 import 'dart:core';
 
-const apiKey = "-------------";
+const apiKey = "---------------";
 
 class WeatherDisplayData {
   Icon weatherIcon;
