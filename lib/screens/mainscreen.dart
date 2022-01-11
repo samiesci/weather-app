@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_required_positional_param, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -6,7 +8,7 @@ import 'package:hava/utils/weather.dart';
 class MainScreen extends StatefulWidget {
   WeatherData weatherData;
 
-  MainScreen( @required this.weatherData) ;
+  MainScreen( @required this.weatherData, {required WeatherData weatherData})
 
   @override
   _MainScreenState createState() => _MainScreenState();
